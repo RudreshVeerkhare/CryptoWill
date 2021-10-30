@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CryptoWill
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+People write WILL to dictate how their assets must be managed after they pass away. In this era of emerging technologies, many people possess digital assets such as Bitcoin, but because of how new this technology is, there hasn't been much work focusing on **CryptoWill** i.e **WILLs powered by Blockchain**.
 
-```bash
-npm run dev
-# or
-yarn dev
+Let's say someone has bought 100 Bitcoins 10 years ago (which would've cost around [$300](https://www.in2013dollars.com/bitcoin-price-in-2011) at that time) and then, unfortunately, passed away in recent years, but now along with that person, those 100 Bitcoins (Worth Approx. **$6.1 Million** (1BTC = Aprx. $61000) in the year 2021) are also lost.
+
+And due to the nature of the Blockchain, once the private key to the wallet is gone (which is supposed to be only known to the Owner), all assets in that wallet are also lost forever.
+
+This situation could've been managed with the help of WILL, i.e if the person would've written a WILL stating how his Bitcoins should be managed, today those 100 Bitcoins would get saved.
+
+But writing Centralized, Old-fashioned WILL for digital assets seems so trite and also adds a new set of problems.
+
+## Solution
+
+Thus CryptoWill is a Decentralized solution for creating your WILL using Smart Contract, which means you are essentially writing your will into the Blockchain. And it is much more flexible than how normal, traditional WILL. You can modify it anywhere and anytime without any hassle.
+
+The Main Problem with Decentralized WILL was that how a smart contract would get to know if a person is alive or passed away?
+So to tackle this, every CryptoWill has a locking period. Let's assume that we have created a CryptoWill and its locking period is 2 years, which means that the CryptoWill will be unlocked for its beneficiary to claim after 2 years from the last active time of its owner. For example, if the owner has last interaction with the contract in Oct 2021, and the locking period is 2 years, then this CryptoWill will get unlocked in Oct 2023 for its beneficiary to access.
+
+## Setup Guide
+
+To run this app locally follow given steps :
+
+1. Clone this repository
+
+```console
+git clone https://github.com/RudreshVeerkhare/CryptoWill.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Then cd into the cloned repo and install all required NPM packages
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```console
+cd CryptoWill
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Then to start next.js dev server using command
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```console
+npm run dev
+```
 
-## Learn More
+That's it !! Now just open http://localhost:3000/ on your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Celo Blockchain
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+As interaction with the Blockchain costs a certain amount as gas fees, it'll be more convenient for users if the Blockchain has lower transaction fees and larger transaction throughput. Celo blockchain satisfies both these criteria, plus it also has support for mobile users. So I've chosen Celo Blockchain for CryptoWill.
