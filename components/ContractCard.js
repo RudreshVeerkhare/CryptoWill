@@ -597,7 +597,7 @@ const ListTokens = ({ lockerAddr }) => {
 
             if (data.status != 1) {
                 console.log("Locked Assets => ", data);
-                showToast("Error While Fetching Locked Assets", "error");
+                // showToast("Error While Fetching Locked Assets", "error");
                 setTokens([]);
                 return;
             }
