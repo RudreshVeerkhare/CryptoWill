@@ -23,6 +23,14 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const Web3 = require("web3");
+const fs = require("fs");
+const ContractKit = require("@celo/contractkit");
+const web3 = new Web3("https://alfajores-forno.celo-testnet.org");
+const kit = ContractKit.newKitFromWeb3(web3);
+const privateKey = fs.readFileSync(".secret").toString().trim();
+kit.connection.addAccount(privateKey);
+
 module.exports = {
     /**
      * Networks define how you connect to your ethereum client and let you set the
@@ -45,6 +53,11 @@ module.exports = {
             host: "127.0.0.1", // Localhost (default: none)
             port: 8545, // Standard Ethereum port (default: none)
             network_id: "*", // Any network (default: none)
+        },
+        alfajores: {
+            provider: kit.connection.web3.currentProvider, // CeloProvider
+            network_id: 44787, // Alfajores network id
+            gas: 20000000,
         },
         // Another network with more advanced options...
         // advanced: {
