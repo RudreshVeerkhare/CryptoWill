@@ -4,10 +4,10 @@ import {
     useContractKit,
 } from "@celo-tools/use-contractkit";
 
-import { Cards, Header } from "../components";
+import { Cards, Header, SearchBar } from "../components";
 import { useToast } from "../components/SnackBarContext";
 import LockerFactoryJson from "../build/contracts/LockerFactory.json";
-import { LOCKER_FACTORY } from "../address";
+import { LOCKER_FACTORY } from "../constants";
 import blockchain_png from "../public/blockchain.png";
 
 function App() {
@@ -59,6 +59,7 @@ function App() {
         >
             <Header setAddress={setAddress} addressState={addressState} />
             <Cards addLocker={addLocker} />
+            <SearchBar lockers={lockers} />
         </main>
     );
 }

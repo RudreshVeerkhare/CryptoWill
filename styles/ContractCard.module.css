@@ -1,0 +1,53 @@
+.createbtn {
+    background-color: rgba(53, 208, 127, 0.8);
+}
+
+.createbtn:hover {
+    background-color: rgba(53, 208, 127, 1);
+}
+
+.claimbtn {
+    background-color: rgba(251, 204, 92, 0.8);
+}
+
+.claimbtn:hover {
+    background-color: rgba(251, 204, 92, 1);
+}
+
+/* From basic */
+
+.root {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.media {
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.expand {
+    transform: rotate(0deg);
+    margin-left: auto;
+}
+
+.expandopen {
+    transform: rotate(180deg);
+}
+
+.avatar {
+    background-color: red;
+}
+
+.center {
+    text-align: "center";
+    padding: 5px;
+}
+
+.createborder {
+    border-left: 10px solid rgba(53, 208, 127, 1);
+}
+.claimborder {
+    border-left: 10px solid rgba(251, 204, 92, 1);
+}

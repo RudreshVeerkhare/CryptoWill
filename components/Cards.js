@@ -13,7 +13,7 @@ import { useContractKit } from "@celo-tools/use-contractkit";
 import LockerJson from "../build/contracts/Locker.json";
 import LockerFactoryJson from "../build/contracts/LockerFactory.json";
 import { useToast } from "../components/SnackBarContext";
-import { LOCKER, LOCKER_FACTORY } from "../address";
+import { LOCKER, LOCKER_FACTORY } from "../constants";
 import cx from "classnames";
 
 import styles from "../styles/Cards.module.css";
