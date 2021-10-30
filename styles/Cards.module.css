@@ -1,0 +1,36 @@
+.container {
+    margin: 50px 0;
+    width: 60%;
+}
+
+.card {
+    margin: 0 2% !important;
+}
+
+.yellow {
+    border-bottom: 10px solid rgba(251, 204, 92, 1);
+}
+
+.green {
+    border-bottom: 10px solid rgba(53, 208, 127, 1);
+}
+
+.tabpanel {
+    margin-top: 1.25rem;
+}
+
+.createbtn {
+    background-color: rgba(53, 208, 127, 0.8);
+}
+
+.createbtn:hover {
+    background-color: rgba(53, 208, 127, 1);
+}
+
+.claimbtn {
+    background-color: rgba(251, 204, 92, 0.8);
+}
+
+.claimbtn:hover {
+    background-color: rgba(251, 204, 92, 1);
+}

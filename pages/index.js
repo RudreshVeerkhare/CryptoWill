@@ -4,10 +4,11 @@ import {
     useContractKit,
 } from "@celo-tools/use-contractkit";
 
-import { Header } from "../components";
+import { Cards, Header } from "../components";
 import { useToast } from "../components/SnackBarContext";
 import LockerFactoryJson from "../build/contracts/LockerFactory.json";
 import { LOCKER_FACTORY } from "../address";
+import blockchain_png from "../public/blockchain.png";
 
 function App() {
     const [lockers, setLockers] = useState([]);
@@ -57,6 +58,7 @@ function App() {
             }}
         >
             <Header setAddress={setAddress} addressState={addressState} />
+            <Cards addLocker={addLocker} />
         </main>
     );
 }
