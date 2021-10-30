@@ -4,6 +4,7 @@ import {
     useContractKit,
 } from "@celo-tools/use-contractkit";
 
+import { useToast } from "../components/SnackBarContext";
 import LockerFactoryJson from "../build/contracts/LockerFactory.json";
 import { LOCKER_FACTORY } from "../address";
 
@@ -11,6 +12,7 @@ function App() {
     const [lockers, setLockers] = useState([]);
     const { address, performActions } = useContractKit();
     const [addressState, setAddressState] = useState();
+    const showToast = useToast();
 
     useEffect(() => {
         performActions(async (kit) => {
@@ -27,6 +29,7 @@ function App() {
             setLockers(allLockers);
         }).catch((err) => {
             console.log("App => ", err);
+            showToast(err.message, "error");
         });
 
         setAddress(address);
