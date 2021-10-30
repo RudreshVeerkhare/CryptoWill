@@ -4,6 +4,7 @@ import {
     useContractKit,
 } from "@celo-tools/use-contractkit";
 
+import { Header } from "../components";
 import { useToast } from "../components/SnackBarContext";
 import LockerFactoryJson from "../build/contracts/LockerFactory.json";
 import { LOCKER_FACTORY } from "../address";
@@ -55,7 +56,7 @@ function App() {
                 backgroundSize: "900px",
             }}
         >
-            <h1>CryptoWill</h1>
+            <Header setAddress={setAddress} addressState={addressState} />
         </main>
     );
 }
