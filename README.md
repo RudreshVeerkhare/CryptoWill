@@ -19,6 +19,30 @@ Thus CryptoWill is a Decentralized solution for creating your WILL using Smart C
 The Main Problem with Decentralized WILL was that how a smart contract would get to know if a person is alive or passed away?
 So to tackle this, every CryptoWill has a locking period. Let's assume that we have created a CryptoWill and its locking period is 2 years, which means that the CryptoWill will be unlocked for its beneficiary to claim after 2 years from the last active time of its owner. For example, if the owner has last interaction with the contract in Oct 2021, and the locking period is 2 years, then this CryptoWill will get unlocked in Oct 2023 for its beneficiary to access.
 
+## Screenshots and Demo
+
+Full Demo : [https://youtu.be/5LRccxdqBAk](https://youtu.be/5LRccxdqBAk)
+
+![landing page](./public/LandingPageSnap.png)
+
+![create will](./public/CreateContractBlank.png)
+
+![list create open](./public/ContractListCreateOpen.png)
+
+![list claim open](./public/ContractListClaimOpen.png)
+
+![transaction](./public/SendingTransactionDeposit.png)
+
+## Smart Contract Structure
+
+LockerFactory Deployed Contract (Alfajores Testnet) : [0x05CE2C96BDEEC4082dFCb8807BC5dB130eE17E8E](https://alfajores-blockscout.celo-testnet.org/address/0x05CE2C96BDEEC4082dFCb8807BC5dB130eE17E8E/transactions)
+
+![Contract Structure](./public/ContractStructure.png)
+
+## Celo Blockchain
+
+As interaction with the Blockchain costs a certain amount as gas fees, it'll be more convenient for users if the Blockchain has lower transaction fees and larger transaction throughput. Celo blockchain satisfies both these criteria, plus it also has support for mobile users. So I've chosen Celo Blockchain for CryptoWill.
+
 ## Setup Guide
 
 To run this app locally follow given steps :
@@ -43,7 +67,3 @@ npm run dev
 ```
 
 That's it !! Now just open http://localhost:3000/ on your browser.
-
-## Celo Blockchain
-
-As interaction with the Blockchain costs a certain amount as gas fees, it'll be more convenient for users if the Blockchain has lower transaction fees and larger transaction throughput. Celo blockchain satisfies both these criteria, plus it also has support for mobile users. So I've chosen Celo Blockchain for CryptoWill.
