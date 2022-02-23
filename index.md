@@ -1,37 +1,69 @@
-## Welcome to GitHub Pages
+# CryptoWill
 
-You can use the [editor on GitHub](https://github.com/RudreshVeerkhare/CryptoWill/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+People write WILL to dictate how their assets must be managed after they pass away. In this era of emerging technologies, many people possess digital assets such as Bitcoin, but because of how new this technology is, there hasn't been much work focusing on **CryptoWill** i.e **WILLs powered by Blockchain**.
 
-### Markdown
+Let's say someone has bought 100 Bitcoins 10 years ago (which would've cost around [$300](https://www.in2013dollars.com/bitcoin-price-in-2011) at that time) and then, unfortunately, passed away in recent years, but now along with that person, those 100 Bitcoins (Worth Approx. **$6.1 Million** (1BTC = Aprx. $61000) in the year 2021) are also lost.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+And due to the nature of the Blockchain, once the private key to the wallet is gone (which is supposed to be only known to the Owner), all assets in that wallet are also lost forever.
 
-```markdown
-Syntax highlighted code block
+This situation could've been managed with the help of WILL, i.e if the person would've written a WILL stating how his Bitcoins should be managed, today those 100 Bitcoins would get saved.
 
-# Header 1
-## Header 2
-### Header 3
+But writing Centralized, Old-fashioned WILL for digital assets seems so trite and also adds a new set of problems.
 
-- Bulleted
-- List
+## Solution
 
-1. Numbered
-2. List
+Thus CryptoWill is a Decentralized solution for creating your WILL using Smart Contract, which means you are essentially writing your will into the Blockchain. And it is much more flexible than how normal, traditional WILL. You can modify it anywhere and anytime without any hassle.
 
-**Bold** and _Italic_ and `Code` text
+The Main Problem with Decentralized WILL was that how a smart contract would get to know if a person is alive or passed away?
+So to tackle this, every CryptoWill has a locking period. Let's assume that we have created a CryptoWill and its locking period is 2 years, which means that the CryptoWill will be unlocked for its beneficiary to claim after 2 years from the last active time of its owner. For example, if the owner has last interaction with the contract in Oct 2021, and the locking period is 2 years, then this CryptoWill will get unlocked in Oct 2023 for its beneficiary to access.
 
-[Link](url) and ![Image](src)
+## Screenshots and Demo
+
+Full Demo : [https://youtu.be/5LRccxdqBAk](https://youtu.be/5LRccxdqBAk)
+
+![landing page](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/LandingPageSnap.png)
+
+![create will](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/CreateContractBlank.png)
+
+![list create open](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/ContractListCreateOpen.png)
+
+![list claim open](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/ContractListClaimOpen.png)
+
+![transaction](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/SendingTransactionDeposit.png)
+
+## Smart Contract Structure
+
+LockerFactory Deployed Contract (Alfajores Testnet) : [0x05CE2C96BDEEC4082dFCb8807BC5dB130eE17E8E](https://alfajores-blockscout.celo-testnet.org/address/0x05CE2C96BDEEC4082dFCb8807BC5dB130eE17E8E/transactions)
+
+![Contract Structure](https://github.com/RudreshVeerkhare/CryptoWill/raw/main/public/ContractStructure.png)
+
+## Celo Blockchain
+
+As interaction with the Blockchain costs a certain amount as gas fees, it'll be more convenient for users if the Blockchain has lower transaction fees and larger transaction throughput. Celo blockchain satisfies both these criteria, plus it also has support for mobile users. So I've chosen Celo Blockchain for CryptoWill.
+
+## Setup Guide
+
+To run this app locally follow given steps :
+
+1. Clone this repository
+
+```console
+git clone https://github.com/RudreshVeerkhare/CryptoWill.git
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+2. Then cd into the cloned repo and install all required NPM packages
 
-### Jekyll Themes
+```console
+cd CryptoWill
+npm install
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RudreshVeerkhare/CryptoWill/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+3. Then to start next.js dev server using command
 
-### Support or Contact
+```console
+npm run dev
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+That's it !! Now just open http://localhost:3000/ on your browser.
